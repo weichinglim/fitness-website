@@ -10,6 +10,10 @@ body {
 
 }
 
+.active-link {
+  border-bottom: 3px solid #FF2625;
+}
+
 ::-webkit-scrollbar {
   width: 0px;
 }
@@ -76,6 +80,7 @@ body {
   padding-bottom: 10px;
   transform: scale(1, 1);
   transition: 0.3s all ease-in-out;
+  flex-shrink: 0;
 }
 
 .exercise-card img {
