@@ -43,6 +43,12 @@ const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
 
             setSearch(''); // clear the search 
             setExercises(searchedExercises); // from this, we would want to show the exercises somewhere
+
+            // Scroll down to "Showing Results" when Search button clicked
+            const resultsSection = document.getElementById('exercises');
+                if (resultsSection) {
+                    resultsSection.scrollIntoView({ behavior: 'smooth' });
+                }
         }
     }
 
@@ -62,7 +68,7 @@ const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
                     height='76px'
                     value={search}
                     onChange={(e) => setSearch(e.target.value.toLowerCase())}
-                    placeholder='Search Exercises'
+                    placeholder='Search Exercises: body weight, abs, dumbbell '
                     type='text'
                 />
                 <Button className='search-btn'
