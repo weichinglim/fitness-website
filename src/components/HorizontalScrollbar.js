@@ -32,7 +32,7 @@ const RightArrow = () => {
 const HorizontalScrollbar = ({data, bodyPart, setBodyPart, isBodyParts, maxWidth = '1000px'}) => {
 // console.log('setBodyPart in HorizontalScrollbar:', setBodyPart);
   return (
-    <Box sx={{ width: '100%', position: 'relative', maxWidth, mx: 'auto'}}>
+    <Box sx={{ width: '100%', position: 'relative', mx: 'auto', maxWidth: { xs: '400px', md: maxWidth }}}>
         <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow} >
             {data.map((item) => (
                     <Box
