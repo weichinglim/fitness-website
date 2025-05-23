@@ -15,6 +15,7 @@ const ExerciseVideos = ({exerciseVideos, name}) => {
                     gap: {lg:'110px', xs:'0'}
                 }}
             ml={5}
+            mb={5}
             >
                 {/* // Loop over exercise videos */}
                 {exerciseVideos?.slice(0, 3).map((item, index) => (

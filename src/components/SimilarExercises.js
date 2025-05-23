@@ -10,10 +10,10 @@ const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => {
     return (
     <Box sx={{mt: {lg: '100px', xs:'0'}}} >
         <Typography variant='h3' mb={5} ml={5} >Exercises that target the same muscle group</Typography>
-            <Stack direction='row' sx={{p:'2', position:'relative'}} >
+            <Stack direction='row' sx={{p:'2', position:'relative', marginBottom:'60px'}} m='20px'>
                 {/* Loop over our exercises */}
                 {targetMuscleExercises.length ?
-                    <HorizontalScrollbar data={targetMuscleExercises} />
+                    <HorizontalScrollbar data={targetMuscleExercises} maxWidth="100%" />
                     : <Loader />}
             </Stack>
 
@@ -21,7 +21,7 @@ const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => {
             <Stack direction='row' sx={{p:'2', position:'relative'}} m='20px'>
                 {/* Loop over our exercises */}
                 {equipmentExercises.length ?
-                    <HorizontalScrollbar data={equipmentExercises} />
+                    <HorizontalScrollbar data={equipmentExercises} maxWidth="100%" />
                     : <Loader />}
             </Stack>
 

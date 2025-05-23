@@ -29,22 +29,17 @@ const RightArrow = () => {
     );
 };
 
-const HorizontalScrollbar = ({data, bodyPart, setBodyPart, isBodyParts}) => {
+const HorizontalScrollbar = ({data, bodyPart, setBodyPart, isBodyParts, maxWidth = '1000px'}) => {
 // console.log('setBodyPart in HorizontalScrollbar:', setBodyPart);
   return (
-    <Box sx={{ width: '100%', maxWidth: '960px', overflowX: 'hidden', mx: 'auto', position: 'relative'}} >
+    <Box sx={{ width: '100%', position: 'relative', maxWidth, mx: 'auto'}}>
         <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow} >
             {data.map((item) => (
                     <Box
                         key={item.id || item}
                         itemId={item.id || item}
                         title={item.id || item}
-                        // m='0 40px'
-                        sx={{
-                            width: '270px',
-                            minWidth: '270px',
-                            m: '22px',
-                          }}
+                        m='0 40px'
                     >
                         {/* {item} Now items are listed. (5) Create a BodyPart.js component to display in cards. Render it below */}
                         {isBodyParts ? <BodyPart item={item} bodyPart={bodyPart} setBodyPart={setBodyPart} />
@@ -52,9 +47,8 @@ const HorizontalScrollbar = ({data, bodyPart, setBodyPart, isBodyParts}) => {
                     </Box>
                 )
             )}
-        </ScrollMenu>
-    </Box>
-    
+        </ScrollMenu> 
+    </Box>  
   )
 }
 
