@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Stack } from '@mui/material';
-
-import Logo from '../assets/images/Logo.png';
 import { Link as ScrollLink } from 'react-scroll';
 
+import Logo from '../assets/images/Logo.png';
 
 const Navbar = ({ onExercisesClick }) => {
   return (
