@@ -31,7 +31,7 @@ Credits: [JavaScript Mastery](https://www.youtube.com/watch?v=KBpoBc98BwM&list=P
 
 
 ## Future Improvements
-- Add user authentication Login, Signup and Password Reset
+- Add user authentication Login, Signup and Password Reset 
 - Utilize database so that users can save their favorite exercises
   
 ## Interface Overview
