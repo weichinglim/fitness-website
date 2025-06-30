@@ -27,7 +27,7 @@ const HeroBanner = () => {
             activeClass="active-link" // apply class when target is active
             style={{ textDecoration: 'none', color: '#3A1212', cursor: 'pointer'}}
           >
-            <Button variant='contained' color='error' href='#exercises' sx={{backgroundColor: '#FF2625', padding:'10px'}} >
+            <Button variant='contained' color='error' sx={{backgroundColor: '#FF2625', padding:'10px'}} >
                 Explore Exercises
             </Button>
           </ScrollLink>
@@ -39,5 +39,5 @@ const HeroBanner = () => {
     </Box>
   )
 }
-
+// Removed in  href='#exercises' <Button>
 export default HeroBanner;
